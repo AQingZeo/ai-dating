@@ -1,19 +1,20 @@
 .grid-container {
   display: grid;
-  grid-template-columns: 3fr 2fr;
-  grid-template-rows: 2fr 3fr;
-  gap: 10px;
+  grid-template-columns: 2fr 2fr 2fr; /* Distribute width evenly */
+  grid-template-rows: 1fr 2fr; /* More space for the second row */
+  gap: 20px; /* Increase gap for better spacing */
   height: 100vh;
+  padding: 20px;
 }
 
 .grid-item {
   padding: 20px;
-  grid-row:1/2;
-  grid-column:1/2;
   border: 1px solid #ccc;
   background-color: #f8f8f8;
+  border-radius: 8px;
 }
 
+/* NFT Image */
 .nft-image {
   grid-row: 1 / 2;
   grid-column: 1 / 2;
@@ -27,6 +28,7 @@
   max-height: 100%;
 }
 
+/* NFT Fetch Section */
 .nft-fetch {
   grid-row: 1 / 2;
   grid-column: 2 / 3;
@@ -36,12 +38,45 @@
   align-items: center;
 }
 
+/* Conversation History and Leaderboard side by side */
 .conversation-history {
   grid-row: 2 / 3;
-  grid-column: 1 / 2;
+  grid-column: 2/4;
+  overflow-y: auto;
+  max-height: 60vh;
 }
 
 .leaderboard {
   grid-row: 2 / 3;
-  grid-column: 2 / 3;
+  grid-column: 1/2; /* Spans two columns for more width */
+  overflow-y: auto;
+  max-height: 60vh;
+}
+
+.conversation-history ul {
+  list-style: none;
+  padding: 0;
+}
+
+.conversation-history li {
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.conversation-history li:hover {
+  background-color: #e0e0e0;
+}
+
+.selected {
+  font-weight: bold;
+  background-color: #d0e0ff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.selected td {
+  background-color: #d0e0ff;
 }

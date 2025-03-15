@@ -9,8 +9,8 @@ const LEADERBOARD_API_URL = "https://your-backend.com/api/leaderboard";
 const WEB3_PROVIDER_URL = "https://mainnet.infura.io/v3/YOUR_INFURA_PROJECT_ID";
 
 // Smart Contract Info
-const contractAddress = "YOUR_CONTRACT_ADDRESS";  // Replace with deployed contract address
-const contractABI = [ /* Paste ABI from compiled contract */ ];
+const contractAddress = "0x5837a157fB066dd25B9E8903554af55a6C889bC7";  // Replace with deployed contract address
+const contractABI = ['.contractABI.json'];
 
 const App = () => {
   const [conversations, setConversations] = useState([]);
